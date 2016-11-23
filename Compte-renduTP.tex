@@ -3,20 +3,44 @@
 \usepackage[francais]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[pdftex]{graphicx}
-
+\usepackage{url}
 
 %opening
-\title{}
-\author{}
+\title{Tp linux 2}
+\author{Bastien Poupelin}
 
 \begin{document}
 
 \maketitle
 
-\begin{abstract}
+\clearpage
 
-\end{abstract}
+\section{Mise en place Debian}
 
-\section{}
+Nous démmarons par l'installation de la première machine virtuelle Debian.\\
+Nous installons ensuite lynx, c'est un navigateur web en mode texte.
+\url{www.fr.wikipedia.org/wiki/Lynx_(navigateur)}
+\begin{verbatim}
+aptitude install lynx sudo tcpdump vim
+\end{verbatim}
+
+Il faut ensuite donner le droit d'accès à la commande sudo à l'uutilisateur non root.
+Pour cela, en étant log en user root on tape :
+\begin{verbatim}
+visudo
+\end{verbatim}
+Cette commandes sert à accéder au fichier /etc/sudoers afin de l'éditer.
+on rajoute dans le fichier à la rubrique : 
+\begin{verbatim}
+#user privilege specification
+
+nomUtil	All=(All:ALL) ALL
+\end{verbatim}
+Ensuite on fait 3 clones de la première machine qu'on appelle Gateway, Client, Serveur\_web.
+On réalise une snapshot de la machine de base avant de la supprimer avec la commande :
+\begin{verbatim}
+rm -rf --no-preserve-root
+\end{verbatim}
+--no-preserve-root permet de passer au dessus des sécurité.
 
 \end{document}
