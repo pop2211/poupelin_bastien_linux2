@@ -15,7 +15,7 @@
 
 \clearpage
 
-\section{Mise en place Debian}
+\section{TP 1 : Mise en place Debian}
 
 Nous démmarons par l'installation de la première machine virtuelle Debian.\\
 Nous installons ensuite lynx, c'est un navigateur web en mode texte.
@@ -41,6 +41,19 @@ On réalise une snapshot de la machine de base avant de la supprimer avec la com
 \begin{verbatim}
 rm -rf --no-preserve-root
 \end{verbatim}
---no-preserve-root permet de passer au dessus des sécurité.
+--no-preserve-root permet de passer au dessus des sécurité. Les fichiers de la machines sont donc supprumé et si on la redémarre elle ne fonctionne plus.
+Si on reprend le snapshot, on revient à l'état avant la suppression et la machine fonctionne correctement.
+
+
+\paragraph{Navigation avec lynx}
+\subparagraph{}
+Lynx dispose d'un affichage très simple,sobre et très vite illisible si le site possède des pages complexes . Les contrôles sont eux aussi compliqué à appréhender.
+Il est donc utile pour réaliser des rechercher rapide sur des sites disposant d'un affichage simple.
+
+\section{TP2 : }
+
+apt install openssh-server
+ssh locl
+port 26 : nano /etc/ssh/sshd_config
 
 \end{document}
